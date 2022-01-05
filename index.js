@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
-// const inquirer = require "inquirer"
-// const fs = require("fs");
-// const path = require("path");
+const inquirer = require("inquirer");
+const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
@@ -43,9 +42,10 @@ const questions = [
     name: "credits",
   },
   {
-    type: "input",
+    type: "list",
     message: "Choose a license to use for your project?",
-    name: "",
+    name: "license",
+    choices: ["MIT", "Creative Commons", "BSD"],
   },
   {
     type: "input",
@@ -61,19 +61,33 @@ const questions = [
     type: "input",
     message: "Write any tests for your project.",
     name: "tests",
-  }
+  },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-//     fs.writeFile(path.join(__dirname, "./readme-generator", "README.md"), generateMarkdown, err => {
-//     if (err) throw err;
-//     console.log("README written...");
-// })
+  fs.appendFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log("README written...")
+  );
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      // pass answers into writeToFile function
+      writeToFile("README1.md", generateMarkdown(answers));
+    })
+    .catch((error) => {
+      if (error.isTtyError) {
+        // Prompt couldn't be rendered in the current environment
+      } else {
+        // Something else went wrong
+        console.log("another error");
+      }
+    });
+}
 
 // Function call to initialize app
 
