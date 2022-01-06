@@ -45,7 +45,7 @@ const questions = [
     type: "list",
     message: "Choose a license to use for your project?",
     name: "license",
-    choices: ["MIT", "Creative Commons", "BSD"],
+    choices: ["MIT", "Creative Commons", "BSD", "GNU", ""],
   },
   {
     type: "input",
@@ -77,7 +77,7 @@ function init() {
     .prompt(questions)
     .then((answers) => {
       // pass answers into writeToFile function
-      writeToFile("README1.md", generateMarkdown(answers));
+      writeToFile("README_test.md", generateMarkdown(answers));
     })
     .catch((error) => {
       if (error.isTtyError) {
