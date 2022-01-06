@@ -77,16 +77,8 @@ function init() {
     .prompt(questions)
     .then((answers) => {
       // pass answers into writeToFile function
-      writeToFile("README_test.md", generateMarkdown(answers));
+      writeToFile("./demo/README_demo.md", generateMarkdown(answers));
     })
-    .catch((error) => {
-      if (error.isTtyError) {
-        // Prompt couldn't be rendered in the current environment
-      } else {
-        // Something else went wrong
-        console.log("another error");
-      }
-    });
 }
 
 // Function call to initialize app
