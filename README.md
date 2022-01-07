@@ -18,6 +18,8 @@
     ![Prompt](./images/screenshot-prompts.png)
     ![ReadMe1](./images/screenshot-readme-demo1.png)
     ![ReadMe2](./images/screenshot-readme-demo2.png)
+- Video:
+    ![Demo](./images/demo-video.gif)
 ## Credits
 - N/A
 ## License
