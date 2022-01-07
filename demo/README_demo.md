@@ -27,7 +27,7 @@
   You should have received a copy of the license along with this
   work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
 ## Badges 
-- [![License](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 ## Features
 - n/a
 ## How to Contribute

@@ -19,7 +19,8 @@
     ![ReadMe1](./images/screenshot-readme-demo1.png)
     ![ReadMe2](./images/screenshot-readme-demo2.png)
 - Video:
-    ![Demo](./images/demo-video.gif)
+    ![Demo-video](./images/demo-video.mp4)
+    ![Demo-gif](./images/demo-video.gif)
 ## Credits
 - N/A
 ## License
