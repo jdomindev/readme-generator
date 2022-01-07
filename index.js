@@ -45,7 +45,7 @@ const questions = [
     type: "list",
     message: "Choose a license to use for your project?",
     name: "license",
-    choices: ["MIT", "Creative Commons", "BSD", "GNU", ""],
+    choices: ["MIT", "Creative Commons", "BSD", "GNU", "None"],
   },
   {
     type: "input",
