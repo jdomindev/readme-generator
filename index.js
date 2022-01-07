@@ -79,7 +79,8 @@ function init() {
       // pass answers into writeToFile function
       writeToFile("./demo/README_demo.md", generateMarkdown(answers));
     })
-}
+    .catch((err) => console.log(err));
+  }
 
 // Function call to initialize app
 
